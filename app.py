@@ -16,94 +16,73 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-html, body, [class*="css"] {
-    font-family: 'Inter', sans-serif;
-}
-
+/* Main background */
 .stApp {
-    background: linear-gradient(135deg, #eef4f8, #e5f2f2);
+    background: #F1F5F9 !important;
+    color: #172033 !important;
+    font-family: Arial, sans-serif;
 }
 
-header[data-testid="stHeader"] {
-    background: transparent;
+/* Main text */
+.stApp p,
+.stApp label,
+.stMarkdown,
+.stCaption,
+.stApp li {
+    color: #172033 !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
 }
 
-.block-container {
-    padding-top: 2rem;
-    max-width: 1150px;
-}
-
-.hero {
-    background: linear-gradient(120deg, #142B4A, #1D4966);
-    padding: 35px;
-    border-radius: 22px;
-    color: white;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(20,43,74,0.15);
-}
-
-.hero h1 {
-    color: white;
-    font-size: 38px;
-    font-weight: 800;
-    margin-bottom: 8px;
-}
-
-.hero p {
-    color: #d6e7ef;
-    font-size: 16px;
-}
-
-.section-card {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(20,43,74,0.07);
-    margin-bottom: 20px;
-}
-
-.stat-card {
-    background: white;
-    border-radius: 15px;
-    padding: 18px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(20,43,74,0.06);
-}
-
-.stat-card h2 {
-    color: #142B4A;
-    margin: 0;
-}
-
-.stat-card p {
-    color: #64748b;
-    margin: 5px 0 0;
-}
-
-.stButton > button {
-    background: #20B9A8;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: 700;
-    min-height: 45px;
-    transition: 0.2s;
-}
-
-.stButton > button:hover {
-    background: #168f84;
-    color: white;
-    border: none;
-}
-
+/* Headings */
 h1, h2, h3 {
-    color: #142B4A;
+    color: #172554 !important;
+    font-weight: 800 !important;
 }
 
-footer {
-    visibility: hidden;
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #E2E8F0 !important;
+}
+
+/* Cards */
+[data-testid="stMetric"] {
+    background: #FFFFFF !important;
+    padding: 18px !important;
+    border-radius: 14px !important;
+}
+
+/* Text area */
+.stTextArea textarea {
+    background: #FFFFFF !important;
+    color: #172033 !important;
+    -webkit-text-fill-color: #172033 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    border: 2px solid #94A3B8 !important;
+}
+
+/* Dropdown */
+.stSelectbox div[data-baseweb="select"] {
+    background: #FFFFFF !important;
+    color: #172033 !important;
+    font-size: 17px !important;
+}
+
+/* Buttons */
+.stButton button {
+    background: #0F766E !important;
+    color: #FFFFFF !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+}
+
+/* Placeholder */
+textarea::placeholder {
+    color: #64748B !important;
+    opacity: 1 !important;
 }
 
 </style>
@@ -317,4 +296,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
 
