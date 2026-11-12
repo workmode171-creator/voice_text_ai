@@ -11,9 +11,11 @@ def transcribe_audio(audio_bytes, language="en-US"):
         results = []
 
         with sr.AudioFile(audio_file) as source:
-            # Read long recordings in smaller sections
+
+            # Read audio in 25-second sections
             while True:
-                audio = source.record(
+                audio = recognizer.record(
+                    source,
                     duration=25
                 )
 
@@ -30,7 +32,6 @@ def transcribe_audio(audio_bytes, language="en-US"):
                         results.append(text.strip())
 
                 except sr.UnknownValueError:
-                    # Skip sections that cannot be understood
                     continue
 
         if results:
@@ -46,4 +47,3 @@ def transcribe_audio(audio_bytes, language="en-US"):
 
     except Exception as e:
         return f"Error: {str(e)}"
-
