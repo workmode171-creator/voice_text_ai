@@ -1,0 +1,4 @@
+streamlit>=1.40.0
+faster-whisper>=1.1.1
+audio-recorder-streamlit>=0.0.10
+iso639-lang>=2.2.3
